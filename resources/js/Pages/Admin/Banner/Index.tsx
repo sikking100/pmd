@@ -30,12 +30,13 @@ export default function Banner(props: Props) {
 
   const [selectedFile, setSelectedFile] = React.useState<Blob | MediaSource>()
   const [preview, setPreview] = React.useState<string>()
+  const [disabled, setDisabled] = React.useState<boolean>(true)
 
   console.log(props.banner !== null)
   React.useEffect(() => {
     if (!selectedFile) {
       if (props.banner !== null) {
-        setPreview(`../../../storage/images/${props.banner?.image}`)
+        setPreview(`../../../storage/banner/${props.banner?.image}`)
         return
       }
       setPreview(undefined)
@@ -44,6 +45,12 @@ export default function Banner(props: Props) {
 
     const objectUrl = URL.createObjectURL(selectedFile)
     setPreview(objectUrl)
+
+    if (selectedFile != null) {
+      setDisabled(false)
+    } else {
+      setDisabled(true)
+    }
 
     return () => URL.revokeObjectURL(objectUrl)
   }, [selectedFile])
@@ -76,7 +83,7 @@ export default function Banner(props: Props) {
     <Authenticated
       auth={props.auth}
       errors={props.errors}
-      header={<h2 className="font-semibold text-xl text-white leading-tight">Struktur Organisasi</h2>}
+      header={<h2 className="font-semibold text-xl text-white leading-tight">Banner</h2>}
     >
       <Head title="Banner" />
       <Alert
@@ -107,6 +114,7 @@ export default function Banner(props: Props) {
 
               <div className="md:flex md:items-center">
                 <button
+                  disabled={disabled}
                   className="shadow bg-purple-500 hover:bg-purple-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                   type="submit"
                 >

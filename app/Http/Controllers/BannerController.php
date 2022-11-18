@@ -35,7 +35,7 @@ class BannerController extends Controller
     public function store(BannerRequest $request)
     {
         $banner = Banner::make($request->all());
-        if ($request->file != null) {
+        if ($request->image != null) {
           $this->upload->uploadImage($request, 'banner', $banner);
         }
         $banner->save();
@@ -52,7 +52,7 @@ class BannerController extends Controller
      */
     public function update(BannerRequest $request, Banner $banner)
     {
-        if ($request->file != null) {
+        if ($request->image != null) {
             $this->upload->deleteImage('banner', $banner);
             $this->upload->uploadImage($request,'banner',$banner);
         }
@@ -69,7 +69,7 @@ class BannerController extends Controller
      */
     public function destroy(Banner $banner)
     {
-        $this->up->deleteFile('banner', $banner);
+        $this->upload->deleteFile('banner', $banner);
         $banner->delete();
         session()->flash('message', 'Berhasil menghapus data');
         return redirect()->route('banner.index');

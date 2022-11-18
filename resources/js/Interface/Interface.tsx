@@ -12,11 +12,8 @@ export interface GlobalProps extends Page<PageProps> {
     announcement: {
       text: string
     }
-    counter: {
-      total: number
-      kk: number
-      men: number
-      women: number
+    banner: {
+      image: string
     }
     siteKey: string
     tinyKey: string
@@ -165,42 +162,6 @@ export const menuItems: Array<MenuItemProps> = [
     ],
   },
   {
-    title: 'Produk Hukum',
-    route: null,
-    submenu: [
-      {
-        title: 'Peraturan Presiden',
-        route: 'perpres',
-        submenu: null
-      },
-      {
-        title: 'Peraturan Pemerintah',
-        route: 'pp',
-        submenu: null
-      },
-      {
-        title: 'Undang-Undang',
-        route: 'uu',
-        submenu: null
-      },
-      {
-        title: 'Peraturan Menteri Dalam Negeri',
-        route: 'permendagri',
-        submenu: null
-      },
-      {
-        title: 'Peraturan Daerah',
-        route: 'perda',
-        submenu: null
-      },
-      {
-        title: 'Edaran',
-        route: 'edaran',
-        submenu: null
-      },
-    ]
-  },
-  {
     title: 'Arsip',
     route: 'arsip',
     submenu: null
@@ -224,16 +185,6 @@ export const menuItems: Array<MenuItemProps> = [
   {
     title: 'Aktifitas',
     route: 'aktifitas',
-    submenu: null
-  },
-  {
-    title: 'Call Centre',
-    route: 'call-centre',
-    submenu: null
-  },
-  {
-    title: 'Sidia',
-    route: 'https://sidia.dukcapil.morowaliutarakab.go.id/',
     submenu: null
   },
   {
