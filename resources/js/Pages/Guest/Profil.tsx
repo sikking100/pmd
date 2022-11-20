@@ -13,7 +13,7 @@ interface Props {
 }
 
 export default function Profil(props: Props) {
-  const image = props.profile.image == null ? defImage : `../../storage/images/${props.profile.image}`
+  const image = props.profile.image == null ? defImage : `../../storage/photos/${props.profile.image}`
   return (
     <>
       <Guest>

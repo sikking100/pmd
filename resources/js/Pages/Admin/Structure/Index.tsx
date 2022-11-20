@@ -35,7 +35,7 @@ export default function Structure(props: Props) {
   React.useEffect(() => {
     if (!selectedFile) {
       if (props.structure !== null) {
-        setPreview(`../../../storage/images/${props.structure?.image}`)
+        setPreview(`../../../storage/photos/${props.structure?.image}`)
         return
       }
       setPreview(undefined)

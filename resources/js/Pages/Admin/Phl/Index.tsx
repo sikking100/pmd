@@ -4,7 +4,7 @@ import { Head, Link, usePage } from '@inertiajs/inertia-react'
 import { Inertia } from '@inertiajs/inertia'
 import route from 'ziggy-js'
 import Alert from '@/Components/Alert'
-import {UserInterface} from '@/Interface/Interface'
+import { UserInterface } from '@/Interface/Interface'
 
 export interface Phl {
   id: number
@@ -14,12 +14,12 @@ export interface Phl {
 }
 
 interface Props {
-    auth: {
-        user: UserInterface
-    },
-    errors:{
-        [key:string]: any
-    }
+  auth: {
+    user: UserInterface
+  },
+  errors: {
+    [key: string]: any
+  }
   phl?: Array<Phl>
 }
 
@@ -45,12 +45,12 @@ export default function Member(props: Props) {
           <div className="flex flex-row gap-2">
             <Link
               href={route('phl.show', e.id)}
-              className={'bg-blue-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}>
+              className={'bg-blue-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
               Lihat
             </Link>
             <Link
               href={route('phl.edit', e.id)}
-              className={'bg-yellow-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}>
+              className={'bg-yellow-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
               Ubah
             </Link>
             <button
@@ -61,7 +61,7 @@ export default function Member(props: Props) {
                   Inertia.delete(route('phl.destroy', e.id));
                 }
               }}
-              className={'bg-red-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}
+              className={'bg-red-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}
             >
               Hapus
             </button>
@@ -90,7 +90,7 @@ export default function Member(props: Props) {
               <div className='container mx-auto p-6'>
                 <div>
                   <Link
-                    className='text-kemenag'
+                    className='text-teal'
                     href={route('phl.create')}>
                     Tambah data
                   </Link>
@@ -103,7 +103,7 @@ export default function Member(props: Props) {
               <div className='container mx-auto p-6'>
                 <div className={'mb-6'}>
                   <Link
-                    className={'bg-kemenag hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}
+                    className={'bg-teal hover:bg-cold text-white font-bold py-2 px-4 rounded'}
                     href={route('phl.create')}>
                     Tambah data
                   </Link>

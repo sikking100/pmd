@@ -44,12 +44,12 @@ export default function Member(props: Props) {
           <div className="flex flex-row gap-2">
             <Link
               href={route('member.show', e.id)}
-              className={'bg-blue-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}>
+              className={'bg-blue-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
               Lihat
             </Link>
             <Link
               href={route('member.edit', e.id)}
-              className={'bg-yellow-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}>
+              className={'bg-yellow-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
               Ubah
             </Link>
             <button
@@ -60,7 +60,7 @@ export default function Member(props: Props) {
                   Inertia.delete(route('member.destroy', e.id));
                 }
               }}
-              className={'bg-red-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}
+              className={'bg-red-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}
             >
               Hapus
             </button>
@@ -89,7 +89,7 @@ export default function Member(props: Props) {
               <div className='container mx-auto p-6'>
                 <div>
                   <Link
-                    className='text-kemenag'
+                    className='text-teal'
                     href={route('member.create')}>
                     Tambah data
                   </Link>
@@ -102,25 +102,25 @@ export default function Member(props: Props) {
               <div className='container mx-auto p-6 w-full'>
                 <div className={'mb-6'}>
                   <Link
-                    className={'bg-kemenag hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}
+                    className={'bg-teal hover:bg-cold text-white font-bold py-2 px-4 rounded'}
                     href={route('member.create')}>
                     Tambah data
                   </Link>
                 </div>
                 <div className={'w-full'}>
-                    <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-collapse border border-slate-500">
-                        <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                        <tr>
-                            <th className='p-4 border border-slate-600'>No</th>
-                            <th className='p-4 border border-slate-600'>Nip</th>
-                            <th className='p-4 border border-slate-600'>Nama</th>
-                            <th className='p-4 border border-slate-600'>Aksi</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        {list}
-                        </tbody>
-                    </table>
+                  <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-collapse border border-slate-500">
+                    <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                      <tr>
+                        <th className='p-4 border border-slate-600'>No</th>
+                        <th className='p-4 border border-slate-600'>Nip</th>
+                        <th className='p-4 border border-slate-600'>Nama</th>
+                        <th className='p-4 border border-slate-600'>Aksi</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {list}
+                    </tbody>
+                  </table>
                 </div>
               </div>
             }

@@ -34,12 +34,12 @@ export default function Job(props: Props) {
         <td className='p-4 border border-slate-700'>
           <Link
             href={route('archive.show', e.id)}
-            className={'bg-blue-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}>
+            className={'bg-blue-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
             Lihat
           </Link>
           <Link
             href={route('archive.edit', e.id)}
-            className={'ml-4 bg-yellow-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}>
+            className={'ml-4 bg-yellow-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
             Ubah
           </Link>
           <button
@@ -50,7 +50,7 @@ export default function Job(props: Props) {
                 Inertia.delete(route('archive.destroy', e.id));
               }
             }}
-            className={'ml-4 bg-red-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}
+            className={'ml-4 bg-red-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}
           >
             Hapus
           </button>
@@ -70,8 +70,8 @@ export default function Job(props: Props) {
     >
       <Head title="Arsip" />
       <Alert
-      showAlert={showAlert}
-      setShowAlert={setShowAlert}
+        showAlert={showAlert}
+        setShowAlert={setShowAlert}
         message={f.message}
       />
       <div className="py-12">
@@ -81,7 +81,7 @@ export default function Job(props: Props) {
               <div className='container mx-auto p-6'>
                 <div>
                   <Link
-                    className='text-kemenag'
+                    className='text-teal'
                     href={route('archive.create')}>
                     Tambah data
                   </Link>
@@ -94,7 +94,7 @@ export default function Job(props: Props) {
               <div className='container mx-auto p-6'>
                 <div className={'mb-6'}>
                   <Link
-                    className={'bg-kemenag hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}
+                    className={'bg-teal hover:bg-cold text-white font-bold py-2 px-4 rounded'}
                     href={route('archive.create')}>
                     Tambah data
                   </Link>

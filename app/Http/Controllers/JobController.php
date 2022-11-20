@@ -26,7 +26,8 @@ class JobController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Admin/Job/Create');
+        $jobs = Job::all();
+        return Inertia::render('Admin/Job/Create', compact('jobs'));
     }
 
     /**
@@ -62,7 +63,11 @@ class JobController extends Controller
      */
     public function edit(Job $job)
     {
-        return Inertia::render('Admin/Job/Edit', compact('job'));
+        $jobs = Job::all();
+        return Inertia::render('Admin/Job/Edit', [
+            'job' => $job,
+            'jobs' => $jobs
+        ]);
     }
 
     /**

@@ -16,7 +16,7 @@ export default function Sambutan(props: Props) {
       <Guest>
         <Head title="Sambutan Kepala Dinas" />
         <div>
-          <img src={`../../storage/images/${props.welcome.image}`} />
+          <img src={`../../storage/photos/${props.welcome.image}`} />
         </div>
         <div className="my-6">
           {parse(props.welcome.description)}

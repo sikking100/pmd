@@ -59,7 +59,7 @@ export default function Welcome(props: Props) {
   React.useEffect(() => {
     if (!selectedFile) {
       if (props.welcome !== null) {
-        setPreview(`../../../storage/images/${props.welcome?.image}`);
+        setPreview(`../../../storage/photos/${props.welcome?.image}`);
         return;
       }
       setPreview(undefined);

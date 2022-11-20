@@ -3,12 +3,13 @@ import Authenticated from '@/Layouts/AuthenticatedLayout'
 import { Head, Link, usePage } from '@inertiajs/inertia-react'
 import route from 'ziggy-js'
 import Alert from '@/Components/Alert'
-import {FlashProps} from '@/Interface/Interface'
+import { FlashProps } from '@/Interface/Interface'
 
 export interface Job {
   id: number
   position: string
   detail: string
+  parent?: number
 }
 
 interface Props {
@@ -34,26 +35,9 @@ export default function Job(props: Props) {
         <td className='p-4 border border-slate-700'>
           <Link
             href={route('job.show', e.id)}
-            className={'bg-blue-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}>
+            className={'bg-blue-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
             Lihat
           </Link>
-          {/*<Link*/}
-          {/*  href={route('job.edit', e.id)}*/}
-          {/*  className={'ml-4 bg-yellow-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}>*/}
-          {/*  Ubah*/}
-          {/*</Link>*/}
-          {/*<button*/}
-          {/*  onClick={(ef) => {*/}
-          {/*    ef.preventDefault()*/}
-          {/*    if (confirm("Yakin ingin mengahpus data?")) {*/}
-          {/*      setShowAlert(true)*/}
-          {/*      Inertia.delete(route('job.destroy', e.id));*/}
-          {/*    }*/}
-          {/*  }}*/}
-          {/*  className={'ml-4 bg-red-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}*/}
-          {/*>*/}
-          {/*  Hapus*/}
-          {/*</button>*/}
         </td>
       </tr>
     )
@@ -96,26 +80,14 @@ export default function Job(props: Props) {
           <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             {props.jobs?.length === 0 ?
               <div className='container mx-auto p-6'>
-                {/*<div>*/}
-                {/*  <Link*/}
-                {/*    className='text-kemenag'*/}
-                {/*    href={route('job.create')}>*/}
-                {/*    Tambah data*/}
-                {/*  </Link>*/}
-                {/*</div>*/}
+
                 <div>
                   Tidak ada data
                 </div>
 
               </div> :
               <div className='container mx-auto p-6'>
-                {/*<div className={'mb-6'}>*/}
-                {/*  <Link*/}
-                {/*    className={'bg-kemenag hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}*/}
-                {/*    href={route('job.create')}>*/}
-                {/*    Tambah data*/}
-                {/*  </Link>*/}
-                {/*</div>*/}
+
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-collapse border border-slate-500">
                   <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>

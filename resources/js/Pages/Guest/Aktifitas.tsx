@@ -32,7 +32,7 @@ export default function Pegawai(props: Props) {
                     >
 
                       <div
-                        className={'bg-kemenag w-full lg:w-[15.5rem] rounded h-full'}
+                        className={'bg-teal w-full lg:w-[15.5rem] rounded h-full'}
                       >
                         <img src={`../../storage/activities/${activity.image}`}
                           className={'object-cover h-full lg:h-60 min-w-full rounded-t bg-white'}

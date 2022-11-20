@@ -60,7 +60,8 @@ export function MenuItems({ items, depthLevel }: Props) {
   }
 
   const check = window.innerWidth < 960
-  const routess = items.route != null ? items.route.includes('https') ? items.route : route(items.route) : '/#'
+  const jobs = items.route?.split('.').at(-1);
+  const routess = items.route != null ? items.route.includes('https') ? items.route : items.route.includes('tupoksi') ? route('tupoksi', jobs) : route(items.route) : '/#'
 
   return (
 
@@ -78,7 +79,7 @@ export function MenuItems({ items, depthLevel }: Props) {
             aria-haspopup='menu'
             aria-expanded={dropdown ? 'true' : 'false'}
             as='button'
-            className="bg-transparent w-full text-left p-4 hover:bg-kemenag-dark hover:text-white"
+            className="bg-transparent w-full text-left p-4 hover:bg-cold hover:text-white"
           >
             {items.title}
             {depthLevel > 0 ? right : arrow}
@@ -93,7 +94,7 @@ export function MenuItems({ items, depthLevel }: Props) {
         </>
       ) : (
 
-        <Link href={routess} className="block text-left p-4 hover:bg-kemenag-dark hover:text-white" onClick={() => onClick(items.route)}>{items.title}</Link>
+        <Link href={routess} className="block text-left p-4 hover:bg-cold hover:text-white" onClick={() => onClick(items.route)}>{items.title}</Link>
       )
       }
     </li >
@@ -175,7 +176,7 @@ export function MobileMenu({ items, depthLevel }: Props) {
           <button
             aria-haspopup='menu'
             aria-expanded={dropdown ? 'true' : 'false'}
-            className="bg-transparent w-full text-left p-4 hover:bg-kemenag-dark hover:text-white"
+            className="bg-transparent w-full text-left p-4 hover:bg-cold hover:text-white"
           >
             {items.title}
             {depthLevel > 0 ? right : arrow}
@@ -195,7 +196,7 @@ export function MobileMenu({ items, depthLevel }: Props) {
         </>
       ) : (
 
-        <Link href={routess} className="block text-left p-4 hover:bg-kemenag-dark hover:text-white" onClick={() => onClick(items.route)}>{items.title}</Link>
+        <Link href={routess} className="block text-left p-4 hover:bg-cold hover:text-white" onClick={() => onClick(items.route)}>{items.title}</Link>
       )
       }
     </li >

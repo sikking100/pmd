@@ -98,32 +98,15 @@ export default function Guest({ children }: Props) {
       </div>
       <div className="z-0">
         <Marquee
-        speed={70}>
-            <div className="text-red-500">{announcement.text}</div>
+          speed={70}>
+          <div className="text-red-500">{announcement.text}</div>
         </Marquee>
       </div>
-      <div className="z-0 px-6 lg:grid lg:grid-cols-5 lg:gap-6 overflow-hidden">
-        <div className="w-full lg:col-span-4 mb-6 lg:mb-0">
+      <div className="z-0 px-6 overflow-hidden">
+        <div className="w-full mb-6 lg:mb-0">
           {children}
         </div>
-        <div className="lg:col-span-1 lg:justify-items-end space-y-4">
-          <div className="rounded bg-teal p-4 text-white">
-            <span className="text-3xl">0</span>
-            <span className="block">Jumlah Penduduk</span>
-          </div>
-          <div className="rounded bg-teal p-4 text-white">
-            <span className="text-3xl">0</span>
-            <span className="block">Kepala Keluarga</span>
-          </div>
-          <div className="rounded bg-teal p-4 text-white">
-            <span className="text-3xl">0</span>
-            <span className="block">Laki-Laki</span>
-          </div>
-          <div className="rounded bg-teal p-4 text-white">
-            <span className="text-3xl">0</span>
-            <span className="block">Perempuan</span>
-          </div>
-        </div>
+
       </div>
       <footer>
         <div className="px-6 mt-6 pt-5 pb-5 text-white bg-cold">

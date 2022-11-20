@@ -79,84 +79,52 @@ export const menuItems: Array<MenuItemProps> = [
         submenu: [
           {
             title: 'Sekretariat',
-            route: 'sekretariat',
+            route: 'tupoksi.1',
             submenu: [
               {
-                title: 'Subbag. Program, Keuangan dan Aset',
-                route: 'keuangan',
+                title: 'Sub. Bagian Program, Keuangan dan Aset',
+                route: 'tupoksi.2',
                 submenu: null
               },
               {
-                title: 'Subbag. Kepegawaian dan Umum',
-                route: 'kepegawaian',
+                title: 'Sub. Bagian Umum dan Kepegawaian',
+                route: 'tupoksi.3',
                 submenu: null
               },
             ],
           },
           {
-            title: 'Bidang Fasilitasi Pendaftaran Penduduk',
-            route: 'pendaftaran',
+            title: 'Bidang Penataan Kerjasama dan Penyelenggaraan Administrasi Pemerintahan Desa',
+            route: 'tupoksi.4',
             submenu: [
               {
-                title: 'Seksi Identitas Penduduk',
-                route: 'seksi',
+                title: 'Seksi Penataan dan Kerjasama Desa',
+                route: 'tupoksi.5',
                 submenu: null
               },
               {
-                title: 'Seksi Pindah Datang Penduduk',
-                route: 'pindah',
-                submenu: null
-              },
-              {
-                title: 'Seksi Pendataan Penduduk',
-                route: 'pendataan',
+                title: 'Seksi Penyelenggaraan Administrasi Pemerintahan Desa',
+                route: 'tupoksi.6',
                 submenu: null
               },
             ],
           },
           {
-            title: 'Bidang Fasilitasi Pencatatan Sipil',
-            route: 'pencatatan',
+            title: 'Bidang Pemberdayaan dan Pembinaan Masyarakat Desa',
+            route: 'tupoksi.7',
             submenu: [
               {
-                title: 'Seksi Kelahiran',
-                route: 'kelahiran',
+                title: 'Seksi Pembinaan Lembaga Kemasyarakatan dan Pemberdayaan Desa',
+                route: 'tupoksi.8',
                 submenu: null
               },
               {
-                title: 'Seksi Perkawinan dan Perceraian',
-                route: 'perkawinan',
-                submenu: null
-              },
-              {
-                title: 'Seksi Perubahan Status Anak, Kewarganegaraan dan Kematian',
-                route: 'perubahan',
+                title: 'Seksi Pembinaan Masyarakat dan Hukum Adat',
+                route: 'tupoksi.9',
                 submenu: null
               },
             ],
           },
-          {
-            title: 'Bidang Pengelolaan Informasi Administrasi Kependudukan dan Pemanfaatan Data',
-            route: 'pengelolaan',
-            submenu: [
-              {
-                title: 'Seksi Sistem Informasi Administrasi Kependudukan',
-                route: 'sistem',
-                submenu: null
-              },
-              {
-                title: 'Seksi Pengelolaan dan Penyajian Data Kependudukan',
-                route: 'penyajian',
-                submenu: null
-              },
-              {
-                title: 'Seksi Kerjasama dan Inovasi Pelayanan',
-                route: 'kerjasama',
-                submenu: null
-              },
-            ],
-          },
-
         ],
       },
     ],

@@ -25,7 +25,8 @@ class JobRequest extends FormRequest
     {
         return [
             'position' => 'min:3',
-            'detail' => 'min:5'
+            'detail' => 'min:5',
+            'parent' => 'nullable'
         ];
     }
 }

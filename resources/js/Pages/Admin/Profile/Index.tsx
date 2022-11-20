@@ -3,10 +3,10 @@ import Authenticated from '@/Layouts/AuthenticatedLayout'
 import { Head, useForm, usePage } from '@inertiajs/inertia-react'
 import route from 'ziggy-js'
 import { Editor } from '@tinymce/tinymce-react'
-import {ErrorText} from '@/Components/Error'
+import { ErrorText } from '@/Components/Error'
 import Alert from '@/Components/Alert'
-import {Inertia} from '@inertiajs/inertia'
-import {GlobalProps} from '@/Interface/Interface'
+import { Inertia } from '@inertiajs/inertia'
+import { GlobalProps } from '@/Interface/Interface'
 
 interface PropsForm {
   image: File | null
@@ -42,7 +42,7 @@ export default function Profile(props: Props) {
       Inertia.post(route('profile.update', props.profile?.id), {
         'image': data.image,
         'description': data.description,
-          '_method': 'PUT',
+        '_method': 'PUT',
       })
       return
     }
@@ -54,6 +54,10 @@ export default function Profile(props: Props) {
 
   React.useEffect(() => {
     if (!selectedFile) {
+      if (props.profile !== null) {
+        setPreview(`../../../storage/photos/${props.profile?.image}`)
+        return
+      }
       setPreview(undefined)
       return
     }
@@ -61,7 +65,7 @@ export default function Profile(props: Props) {
     const objectUrl = URL.createObjectURL(selectedFile)
     setPreview(objectUrl)
 
-    return ()=>URL.revokeObjectURL(objectUrl)
+    return () => URL.revokeObjectURL(objectUrl)
   }, [selectedFile])
 
   const onSelectFile = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -76,10 +80,10 @@ export default function Profile(props: Props) {
 
   const title = props.profile !== null ? "Ubah" : "Simpan"
 
-    const {tinyKey} = usePage<GlobalProps>().props;
+  const { tinyKey } = usePage<GlobalProps>().props;
 
 
-    return (
+  return (
     <Authenticated
       auth={props.auth}
       errors={props.errors}
@@ -87,8 +91,8 @@ export default function Profile(props: Props) {
     >
       <Head title="Profil" />
       <Alert
-      showAlert={showAlert}
-      setShowAlert={setShowAlert}
+        showAlert={showAlert}
+        setShowAlert={setShowAlert}
         message={f.message}
       />
       <div className="py-12">
@@ -123,7 +127,7 @@ export default function Profile(props: Props) {
                   <ErrorText
                     message={errors.image}
                   />
-                  <img src={preview} style={{maxHeight: 200}} />
+                  <img src={preview} style={{ maxHeight: 200 }} />
 
                 </div>
 

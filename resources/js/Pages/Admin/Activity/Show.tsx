@@ -26,7 +26,7 @@ export default function MemberShow(props: Props) {
           <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <div className='container p-6'>
               <Link
-                className="text-kemenag"
+                className="text-teal"
                 href={route('activity.index')}>
                 Kembali
               </Link>

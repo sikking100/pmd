@@ -1,7 +1,7 @@
 import React from 'react'
 import Authenticated from '@/Layouts/AuthenticatedLayout'
-import {Head, Link, usePage} from '@inertiajs/inertia-react'
-import {Inertia} from '@inertiajs/inertia'
+import { Head, Link, usePage } from '@inertiajs/inertia-react'
+import { Inertia } from '@inertiajs/inertia'
 import route from 'ziggy-js'
 import Alert from '@/Components/Alert'
 import HTMLReactParser from 'html-react-parser'
@@ -20,7 +20,7 @@ interface Props {
 }
 
 export default function Activity(props: Props) {
-    const {flash} = usePage().props
+    const { flash } = usePage().props
     const f = flash as { message: string }
     const list: any = []
     props.activity?.forEach((e, i) => {
@@ -39,12 +39,12 @@ export default function Activity(props: Props) {
                     <div className={'flex flex-row gap-2'}>
                         <Link
                             href={route('activity.show', e.id)}
-                            className={'bg-blue-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}>
+                            className={'bg-blue-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
                             Lihat
                         </Link>
                         <Link
                             href={route('activity.edit', e.id)}
-                            className={'bg-yellow-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}>
+                            className={'bg-yellow-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
                             Ubah
                         </Link>
                         <button
@@ -55,7 +55,7 @@ export default function Activity(props: Props) {
                                     Inertia.delete(route('activity.destroy', e.id));
                                 }
                             }}
-                            className={'bg-red-500 hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}
+                            className={'bg-red-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}
                         >
                             Hapus
                         </button>
@@ -75,7 +75,7 @@ export default function Activity(props: Props) {
             errors={props.errors}
             header={<h2 className="font-semibold text-xl text-white leading-tight">Aktivitas</h2>}
         >
-            <Head title="Aktifitas"/>
+            <Head title="Aktifitas" />
             <Alert
                 message={f.message}
                 showAlert={showAlert}
@@ -88,7 +88,7 @@ export default function Activity(props: Props) {
                             <div className='container mx-auto p-6'>
                                 <div>
                                     <Link
-                                        className='text-kemenag'
+                                        className='text-teal'
                                         href={route('activity.create')}>
                                         Tambah data
                                     </Link>
@@ -101,7 +101,7 @@ export default function Activity(props: Props) {
                             <div className='container mx-auto p-6'>
                                 <div className={'mb-6'}>
                                     <Link
-                                        className={'bg-kemenag hover:bg-kemenag-dark text-white font-bold py-2 px-4 rounded'}
+                                        className={'bg-teal hover:bg-cold text-white font-bold py-2 px-4 rounded'}
                                         href={route('activity.create')}>
                                         Tambah data
                                     </Link>
@@ -110,15 +110,15 @@ export default function Activity(props: Props) {
                                     className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-collapse border border-slate-500">
                                     <thead
                                         className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-                                    <tr>
-                                        <th className='p-4 border border-slate-600'>No</th>
-                                        <th className='p-4 border border-slate-600 max-w-sm'>Judul</th>
-                                        <th className='p-4 border border-slate-600'>Deskripsi</th>
-                                        <th className='p-4 border border-slate-600'>Aksi</th>
-                                    </tr>
+                                        <tr>
+                                            <th className='p-4 border border-slate-600'>No</th>
+                                            <th className='p-4 border border-slate-600 max-w-sm'>Judul</th>
+                                            <th className='p-4 border border-slate-600'>Deskripsi</th>
+                                            <th className='p-4 border border-slate-600'>Aksi</th>
+                                        </tr>
                                     </thead>
                                     <tbody>
-                                    {list}
+                                        {list}
                                     </tbody>
                                 </table>
                             </div>

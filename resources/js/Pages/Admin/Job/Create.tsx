@@ -2,10 +2,12 @@ import React from 'react'
 import Authenticated from '@/Layouts/AuthenticatedLayout'
 import { Head } from '@inertiajs/inertia-react'
 import MemberForm from './Form'
+import { Job } from './Index'
 
 interface Props {
   auth: any
   errors: any
+  jobs: Array<Job>
 }
 
 export default function MemberCreate(props: Props) {
@@ -20,6 +22,7 @@ export default function MemberCreate(props: Props) {
         <div className="max-w-7xl mx-auto sm:px-6 lg:px-8">
           <div className="bg-white overflow-hidden shadow-sm sm:rounded-lg">
             <MemberForm
+              jobs={props.jobs}
               isPost={true}
               data={undefined}
             />

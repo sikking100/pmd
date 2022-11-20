@@ -16,7 +16,7 @@ export default function Struktur(props: Props) {
       <Guest>
         <Head title="Struktur Organisasi" />
         <div>
-          <img src={`../../storage/images/${props.struktur.image}`} />
+          <img src={`../../storage/photos/${props.struktur.image}`} />
         </div>
       </Guest>
     </>
