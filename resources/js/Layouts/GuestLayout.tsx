@@ -33,7 +33,7 @@ export default function Guest({ children }: Props) {
                 <path strokeLinecap="round" strokeLinejoin="round"
                   d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
               </svg>
-              <span>+6282195839210</span>
+              <span>+6282240502211</span>
             </div>
             <div>
               <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 lg:ml-4 mr-2 inline-block"
@@ -42,7 +42,7 @@ export default function Guest({ children }: Props) {
                 <path strokeLinecap="round" strokeLinejoin="round"
                   d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
               </svg>
-              <span>disdukcapilkabmorowaliutara@gmail.com</span>
+              <span>dpmdmorut@gmail.com</span>
             </div>
           </div>
         </div>
@@ -109,45 +109,42 @@ export default function Guest({ children }: Props) {
 
       </div>
       <footer>
-        <div className="px-6 mt-6 pt-5 pb-5 text-white bg-cold">
+        <div className="px-6 mt-6 pt-5 pb-5 text-white bg-teal">
           <div className="grid grid-flow-row-dense lg:grid-cols-4 space-y-4">
             <div className="">
               <img alt={"logo-dukacpil-morowali-utara"} src="/assets/logo.png" className="max-h-32" /><br /><br />
-              28CP+PFC, Bahoue, Kec. Petasia, Kabupaten Morowali, Sulawesi Tengah 94971
+              Kompleks Perkantoran Jln. Bumi Nangka Kel. Bahoue Kec. Petasia Kab. Morowali Utara Sulawesi Tengah Kode Pos 94971
 
             </div>
             <div className="">
               <span className="text-xl font-semibold mb-6 block">Link Terkait</span>
-              <button onClick={() => handleOnClick('https://dukcapil.kemendagri.go.id/')}
-                className="block mb-2">Dukcapil Kemendagri
+              <button onClick={() => handleOnClick('http://binapemdes.kemendagri.go.id/')}
+                className="block mb-2">DITJEN BINAPEMDES KEMENDAGRI
               </button>
               <button
-                onClick={() => handleOnClick('https://dukcapil.palukota.go.id/home/social-media-marketing/')}
-                className="block mb-2">Disdukcapil Kota Palu
+                onClick={() => handleOnClick('https://www.kemendesa.go.id/ ')}
+                className="block mb-2">KEMENDESA
               </button>
-              <button onClick={() => handleOnClick('http://morowaliutarakab.go.id/')}
-                className="block mb-2">Kabupaten Morowali Utara
+              <button onClick={() => handleOnClick('https://dpmd.sultengprov.go.id/')}
+                className="block mb-2">DPMD PROVINSI SULAWESI TENGAH
               </button>
 
             </div>
             <div className="">
               <span className="text-xl font-semibold mb-6 block">Link Media Sosial</span>
-              <button onClick={() => handleOnClick('http://www.instagram.com/disdukcapil_morut')}
-                className="block mb-2">Instagram
-              </button>
-              <button
-                onClick={() => handleOnClick('https://www.facebook.com/profile.php?id=100068957509397')}
-                className="block mb-2">Facebook
+              <button onClick={() => handleOnClick('http://www.youtube.com/@dpmdmorowaliutara1364')}
+                className="block mb-2">Youtube
               </button>
             </div>
             <div className="">
               <span className="text-xl font-semibold mb-6 block">Jam Pelayanan</span>
-              <span className="block">Senin - Jum'at: 7.30 am - 16.00 pm</span>
+              <span className="block">Senin – Kamis 08.00 – 16.00</span>
+              <span className="block">Jumat  08.00 – 16.30</span>
             </div>
           </div>
         </div>
       </footer>
-      <div className="bg-navy">
+      <div className="bg-cold">
         <div className="px-5 text-white py-6">
           Copyright &copy;2022 Dinas Pemberdayaan Masyarakat dan Desa Daerah Kabupaten Morowali Utara - CV. Buana Power
         </div>

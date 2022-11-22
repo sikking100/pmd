@@ -78,6 +78,11 @@ export const menuItems: Array<MenuItemProps> = [
         route: null,
         submenu: [
           {
+            title: 'Dinas Pemberdayaan Masyarakat dan Desa Daerah',
+            route: 'tupoksi.10',
+            submenu: null,
+          },
+          {
             title: 'Sekretariat',
             route: 'tupoksi.1',
             submenu: [

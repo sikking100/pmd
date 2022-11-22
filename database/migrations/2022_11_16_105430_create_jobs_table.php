@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->text('position');
             $table->text('detail');
-            $table->int('parent');
+            $table->integer('parent')->nullable();
             $table->timestamps();
         });
     }

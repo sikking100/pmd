@@ -33,11 +33,21 @@ export default function Job(props: Props) {
         </td>
 
         <td className='p-4 border border-slate-700'>
-          <Link
-            href={route('job.show', e.id)}
-            className={'bg-blue-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
-            Lihat
-          </Link>
+          <div
+            className='flex flex-row gap-2'
+          >
+            <Link
+              href={route('job.show', e.id)}
+              className={'bg-blue-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
+              Lihat
+            </Link>
+            <Link
+              href={route('job.edit', e.id)}
+              className={'bg-yellow-500 hover:bg-cold text-white font-bold py-2 px-4 rounded'}>
+              Ubah
+            </Link>
+          </div>
+
         </td>
       </tr>
     )
@@ -87,7 +97,6 @@ export default function Job(props: Props) {
 
               </div> :
               <div className='container mx-auto p-6'>
-
                 <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 border-collapse border border-slate-500">
                   <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                     <tr>
