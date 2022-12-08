@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\ApplicationController;
 use App\Http\Controllers\ArchiveController;
 use App\Http\Controllers\BannerController;
 use App\Http\Controllers\GuestController;
@@ -54,6 +55,7 @@ Route::controller(GuestController::class)->group(function () {
     Route::get('/aktifitas', 'aktifitas')->name('aktifitas');
     Route::get('/aktifitas/{id}', 'aktifitas_detail')->name('aktifitas-detail');
     Route::get('/call-centre', 'call_centre')->name('call-centre');
+    Route::get('/aplikasi', 'aplikasi')->name('aplikasi');
 });
 
 
@@ -75,6 +77,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard', function () {
         return Inertia::render('Admin/Dashboard');
     })->name('dashboard');
+
+    Route::resource('application', ApplicationController::class);
 });
 
 Route::get('/linkstorage', function () {

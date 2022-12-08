@@ -117,6 +117,11 @@ export default function Authenticated({ errors, header, children }: React.PropsW
                   Arsip
                 </NavLink>
               </li>
+              <li className={"rounded-lg mb-4"}>
+                <NavLink href={route('application.index')} active={route().current('application.*')}>
+                  Aplikasi
+                </NavLink>
+              </li>
               <hr className="my-4 min-w-full" />
 
               <li className={"rounded-lg mb-4"}>

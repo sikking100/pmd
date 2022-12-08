@@ -161,6 +161,11 @@ export const menuItems: Array<MenuItemProps> = [
     submenu: null
   },
   {
+    title: 'Aplikasi Pemdes',
+    route: 'aplikasi',
+    submenu: null
+  },
+  {
     title: 'Admin',
     route: 'dashboard',
     submenu: null

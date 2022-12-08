@@ -128,6 +128,9 @@ export default function Guest({ children }: Props) {
               <button onClick={() => handleOnClick('https://dpmd.sultengprov.go.id/')}
                 className="block mb-2">DPMD PROVINSI SULAWESI TENGAH
               </button>
+              <button onClick={() => handleOnClick('https://morowaliutarakab.go.id/')}
+                className="block mb-2">PEMERINTAH KABUPATEN MOROWALI UTARA
+              </button>
 
             </div>
             <div className="">

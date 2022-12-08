@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activity;
+use App\Models\Application;
 use App\Models\Archive;
 use App\Models\Job;
 use App\Models\Member;
@@ -83,5 +84,11 @@ class GuestController extends Controller
   {
     $activity = Activity::where('id', $id)->first();
     return Inertia::render('Guest/AktifitasDetail', compact('activity'));
+  }
+
+  public function aplikasi()
+  {
+    $applications = Application::all();
+    return Inertia::render('Guest/Aplikasi', compact('applications'));
   }
 }
